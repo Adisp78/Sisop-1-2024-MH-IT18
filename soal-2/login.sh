@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Direktori untuk menyimpan file
 USERS_DIR="users"
 
-# Fungsi untuk menampilkan pertanyaan keamanan dan jawaban
 reset_password() {
     read -p "Masukkan email: " email
 
@@ -26,7 +24,6 @@ reset_password() {
     echo "Password Anda: $password"
 }
 
-# Fungsi untuk melakukan login
 login() {
     read -p "Masukkan email: " email
     read -s -p "Masukkan password: " password
@@ -56,7 +53,6 @@ login() {
     fi
 }
 
-# Fungsi untuk mengelola pengguna (hanya untuk admin)
 manage_users() {
     while true; do
         echo "Pilih opsi:"
@@ -88,7 +84,6 @@ manage_users() {
     done
 }
 
-# Fungsi untuk mengedit pengguna
 edit_user() {
     local email="$1"
 
@@ -144,7 +139,6 @@ edit_user() {
     echo "Pengguna berhasil diedit"
 }
 
-# Fungsi untuk menghapus pengguna
 delete_user() {
     local email="$1"
 
